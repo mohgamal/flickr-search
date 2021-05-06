@@ -7,7 +7,7 @@
 
 import FlickrSearchDomain
 
-public struct FlickrImagesModel {
+public struct FlickrImagesModel: Codable {
 
     public let photos: Photos?
     public let stat: String?
