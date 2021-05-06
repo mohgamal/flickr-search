@@ -10,7 +10,7 @@ import FlickrSearchDomain
 public protocol FlickrImagesRemoteDataSourceInterface {
     init (urlString: String)
     
-    func searchFlickrImages(with filter: String, handler: @escaping (Result<FlickrImagesModel, FlickrSearchError>) -> Void)
+    func searchFlickrImages(with filter: String, page: Int, handler: @escaping (Result<FlickrImagesModel, FlickrSearchError>) -> Void)
 }
 
 public class FlickrImagesRemoteDataSource: FlickrImagesRemoteDataSourceInterface {
@@ -20,8 +20,8 @@ public class FlickrImagesRemoteDataSource: FlickrImagesRemoteDataSourceInterface
         self.urlString = urlString
     }
     
-    public func searchFlickrImages(with filter: String, handler: @escaping (Result<FlickrImagesModel, FlickrSearchError>) -> Void) {
-        guard let url = URL(string: "\(urlString)&text=\(filter)") else {
+    public func searchFlickrImages(with filter: String, page: Int handler: @escaping (Result<FlickrImagesModel, FlickrSearchError>) -> Void) {
+        guard let url = URL(string: "\(urlString)&text=\(filter)&page=\(page)") else {
             handler(.failure(FlickrSearchError.NotFound))
             return
         }
