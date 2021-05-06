@@ -19,8 +19,7 @@ public class FlickrImagesDataRepo: FlickrImagesDomainRepoInterface {
         flickrImagesRemoteDataSource.searchFlickrImages(with: filter, page: page) { flickrImagesResultModel in
             switch flickrImagesResultModel {
             case .success(let flickrImagesModel):
-                let flickrImagesEntity = FlickrImagesEntity(photos: flickrImagesModel.photos?.dotPhotos(), stat: flickrImagesModel.stat)
-                handler(.success(flickrImagesEntity))
+                handler(.success(flickrImagesModel.dotFlickrImages()))
             case .failure(let error):
                 handler(.failure(error))
             }
