@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol FlickrImagesDomainRepoInterface {
-    func searchFlickrImages(with filter: String, handler: @escaping (Result<FlickrImagesEntity, FlickrSearchError>) -> Void)
+    func searchFlickrImages(with filter: String, page: Int, handler: @escaping (Result<FlickrImagesEntity, FlickrSearchError>) -> Void)
 }

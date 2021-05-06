@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol FlickrImagesInteractorInterface {
-    func searchFlickrImages(with filter: String, handler: @escaping (Result<FlickrImagesEntity, FlickrSearchError>) -> Void)
+    func searchFlickrImages(with filter: String, page: Int, handler: @escaping (Result<FlickrImagesEntity, FlickrSearchError>) -> Void)
 }
 
 public class FlickrImagesInteractor: FlickrImagesInteractorInterface {
@@ -19,8 +19,8 @@ public class FlickrImagesInteractor: FlickrImagesInteractorInterface {
         self.flickrImagesDomainRepoInterface = flickrImagesDomainRepoInterface
     }
     
-    public func searchFlickrImages(with filter: String, handler: @escaping (Result<FlickrImagesEntity, FlickrSearchError>) -> Void) {
-        flickrImagesDomainRepoInterface.searchFlickrImages(with: filter) { flickrImagesDomainModel in
+    public func searchFlickrImages(with filter: String, page: Int, handler: @escaping (Result<FlickrImagesEntity, FlickrSearchError>) -> Void) {
+        flickrImagesDomainRepoInterface.searchFlickrImages(with: filter, page: page) { flickrImagesDomainModel in
             handler(flickrImagesDomainModel)
         }
     }
