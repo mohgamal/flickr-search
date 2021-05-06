@@ -13,6 +13,8 @@
 		9C0EA6E5264494A100E0467B /* FlickrSearchData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C0EA6E4264494A100E0467B /* FlickrSearchData.framework */; };
 		9C0EA6E6264494A100E0467B /* FlickrSearchData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C0EA6E4264494A100E0467B /* FlickrSearchData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9CBEA4F226449D8E00DD2C53 /* FlickrImagesSearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBEA4F126449D8E00DD2C53 /* FlickrImagesSearchStoryboard.storyboard */; };
+		9CBEA4F726449F8F00DD2C53 /* RecentSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBEA4F526449F8F00DD2C53 /* RecentSearchCell.swift */; };
+		9CBEA4F826449F8F00DD2C53 /* RecentSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBEA4F626449F8F00DD2C53 /* RecentSearchCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		9C0EA6AC26448D9600E0467B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C0EA6E4264494A100E0467B /* FlickrSearchData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FlickrSearchData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBEA4F126449D8E00DD2C53 /* FlickrImagesSearchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlickrImagesSearchStoryboard.storyboard; sourceTree = "<group>"; };
+		9CBEA4F526449F8F00DD2C53 /* RecentSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchCell.swift; sourceTree = "<group>"; };
+		9CBEA4F626449F8F00DD2C53 /* RecentSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentSearchCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,9 +123,19 @@
 		9CBEA4F026449D5000DD2C53 /* FlickrImagesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				9CBEA4F426449F6700DD2C53 /* CustomCells */,
 				9CBEA4F126449D8E00DD2C53 /* FlickrImagesSearchStoryboard.storyboard */,
 			);
 			path = FlickrImagesSearch;
+			sourceTree = "<group>";
+		};
+		9CBEA4F426449F6700DD2C53 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				9CBEA4F526449F8F00DD2C53 /* RecentSearchCell.swift */,
+				9CBEA4F626449F8F00DD2C53 /* RecentSearchCell.xib */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +200,7 @@
 				TargetAttributes = {
 					9C0EA69B26448D9600E0467B = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					9C0EA6A426448D9600E0467B = {
 						CreatedOnToolsVersion = 12.4;
@@ -216,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CBEA4F826449F8F00DD2C53 /* RecentSearchCell.xib in Resources */,
 				9CBEA4F226449D8E00DD2C53 /* FlickrImagesSearchStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CBEA4F726449F8F00DD2C53 /* RecentSearchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +398,7 @@
 		9C0EA6B126448D9600E0467B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QCBY87LF55;
@@ -397,6 +415,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mohabdelaty.FlickrSearchPresentation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -405,6 +424,7 @@
 		9C0EA6B226448D9600E0467B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QCBY87LF55;
@@ -429,6 +449,7 @@
 		9C0EA6B426448D9600E0467B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QCBY87LF55;
 				INFOPLIST_FILE = FlickrSearchPresentationTests/Info.plist;
@@ -447,6 +468,7 @@
 		9C0EA6B526448D9600E0467B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QCBY87LF55;
 				INFOPLIST_FILE = FlickrSearchPresentationTests/Info.plist;
