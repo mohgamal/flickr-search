@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7bu-tx-KxG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Flickr Images Search-->
+        <scene sceneID="XWV-Je-SnL">
+            <objects>
+                <viewController storyboardIdentifier="FlickrImagesSearchVC" id="q6O-2y-H78" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jbN-KB-9AR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search for images ..." translatesAutoresizingMaskIntoConstraints="NO" id="F4V-8d-0RN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rZF-7z-3Xu"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="c1e-Yi-caa">
+                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vAI-Pz-JXg">
+                                    <size key="itemSize" width="187" height="166"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="M2Z-qb-MfY">
+                                <rect key="frame" x="9" y="132" width="405" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="TKD-Oo-GK9"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gr9-8J-10X"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="c1e-Yi-caa" firstAttribute="leading" secondItem="gr9-8J-10X" secondAttribute="leading" id="B50-5z-x8U"/>
+                            <constraint firstItem="M2Z-qb-MfY" firstAttribute="leading" secondItem="gr9-8J-10X" secondAttribute="leading" constant="9" id="Ds4-Eg-kd0"/>
+                            <constraint firstItem="F4V-8d-0RN" firstAttribute="leading" secondItem="gr9-8J-10X" secondAttribute="leading" id="MVT-ld-7Tu"/>
+                            <constraint firstItem="gr9-8J-10X" firstAttribute="trailing" secondItem="M2Z-qb-MfY" secondAttribute="trailing" id="SXQ-Cc-Wuk"/>
+                            <constraint firstItem="c1e-Yi-caa" firstAttribute="top" secondItem="F4V-8d-0RN" secondAttribute="bottom" id="YRS-7N-aKt"/>
+                            <constraint firstItem="F4V-8d-0RN" firstAttribute="top" secondItem="gr9-8J-10X" secondAttribute="top" id="cKp-fP-GFn"/>
+                            <constraint firstItem="F4V-8d-0RN" firstAttribute="trailing" secondItem="gr9-8J-10X" secondAttribute="trailing" id="idM-Nd-kcT"/>
+                            <constraint firstItem="M2Z-qb-MfY" firstAttribute="top" secondItem="F4V-8d-0RN" secondAttribute="bottom" id="jbt-mm-8hX"/>
+                            <constraint firstItem="gr9-8J-10X" firstAttribute="trailing" secondItem="c1e-Yi-caa" secondAttribute="trailing" id="k4f-bx-tRi"/>
+                            <constraint firstItem="gr9-8J-10X" firstAttribute="bottom" secondItem="c1e-Yi-caa" secondAttribute="bottom" id="x5T-hl-zGZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Flickr Images Search" id="GxB-IG-WP3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Tk-Ju-ulk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1266.6666666666667" y="144.64285714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P27-KC-oos">
+            <objects>
+                <navigationController storyboardIdentifier="FlickrImagesSearchNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="7bu-tx-KxG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Ps-ZZ-iDc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.62866324186325073" blue="0.91291958093643188" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="q6O-2y-H78" kind="relationship" relationship="rootViewController" id="1H3-bT-0Mq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="izm-wD-CEU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="357.97101449275362" y="144.64285714285714"/>
+        </scene>
+    </scenes>
+</document>
