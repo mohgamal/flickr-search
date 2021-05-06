@@ -10,6 +10,7 @@
 		9C0EA65A26448D6B00E0467B /* FlickrSearchDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C0EA65026448D6B00E0467B /* FlickrSearchDomain.framework */; };
 		9C0EA65F26448D6B00E0467B /* FlickrSearchDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EA65E26448D6B00E0467B /* FlickrSearchDomainTests.swift */; };
 		9C0EA66126448D6B00E0467B /* FlickrSearchDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0EA65326448D6B00E0467B /* FlickrSearchDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C0EA6CC26448F6E00E0467B /* FlickrImagesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EA6CB26448F6E00E0467B /* FlickrImagesEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		9C0EA65926448D6B00E0467B /* FlickrSearchDomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrSearchDomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0EA65E26448D6B00E0467B /* FlickrSearchDomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrSearchDomainTests.swift; sourceTree = "<group>"; };
 		9C0EA66026448D6B00E0467B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C0EA6CB26448F6E00E0467B /* FlickrImagesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImagesEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		9C0EA65226448D6B00E0467B /* FlickrSearchDomain */ = {
 			isa = PBXGroup;
 			children = (
+				9C0EA6CA26448F4D00E0467B /* FlickrImages */,
 				9C0EA65326448D6B00E0467B /* FlickrSearchDomain.h */,
 				9C0EA65426448D6B00E0467B /* Info.plist */,
 			);
@@ -84,6 +87,14 @@
 				9C0EA66026448D6B00E0467B /* Info.plist */,
 			);
 			path = FlickrSearchDomainTests;
+			sourceTree = "<group>";
+		};
+		9C0EA6CA26448F4D00E0467B /* FlickrImages */ = {
+			isa = PBXGroup;
+			children = (
+				9C0EA6CB26448F6E00E0467B /* FlickrImagesEntity.swift */,
+			);
+			path = FlickrImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 				TargetAttributes = {
 					9C0EA64F26448D6B00E0467B = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					9C0EA65826448D6B00E0467B = {
 						CreatedOnToolsVersion = 12.4;
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0EA6CC26448F6E00E0467B /* FlickrImagesEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		9C0EA66526448D6B00E0467B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QCBY87LF55;
@@ -357,6 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mohabdelaty.FlickrSearchDomain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +380,7 @@
 		9C0EA66626448D6B00E0467B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QCBY87LF55;
@@ -389,6 +405,7 @@
 		9C0EA66826448D6B00E0467B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QCBY87LF55;
 				INFOPLIST_FILE = FlickrSearchDomainTests/Info.plist;
@@ -407,6 +424,7 @@
 		9C0EA66926448D6B00E0467B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QCBY87LF55;
 				INFOPLIST_FILE = FlickrSearchDomainTests/Info.plist;
