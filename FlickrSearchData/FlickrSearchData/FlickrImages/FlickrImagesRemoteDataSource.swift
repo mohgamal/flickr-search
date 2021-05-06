@@ -20,7 +20,7 @@ public class FlickrImagesRemoteDataSource: FlickrImagesRemoteDataSourceInterface
         self.urlString = urlString
     }
     
-    public func searchFlickrImages(with filter: String, page: Int handler: @escaping (Result<FlickrImagesModel, FlickrSearchError>) -> Void) {
+    public func searchFlickrImages(with filter: String, page: Int, handler: @escaping (Result<FlickrImagesModel, FlickrSearchError>) -> Void) {
         guard let url = URL(string: "\(urlString)&text=\(filter)&page=\(page)") else {
             handler(.failure(FlickrSearchError.NotFound))
             return

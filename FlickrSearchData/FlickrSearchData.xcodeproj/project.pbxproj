@@ -14,6 +14,7 @@
 		9C0EA6E12644949900E0467B /* FlickrSearchDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C0EA6DF2644949900E0467B /* FlickrSearchDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9C0EA6F5264494E500E0467B /* FlickrImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EA6F4264494E500E0467B /* FlickrImagesModel.swift */; };
 		9CBEA4E92644976900DD2C53 /* FlickrImagesRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBEA4E82644976900DD2C53 /* FlickrImagesRemoteDataSource.swift */; };
+		9CBEA4EE26449AA900DD2C53 /* FlickrImagesDataRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBEA4ED26449AA900DD2C53 /* FlickrImagesDataRepo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		9C0EA6DF2644949900E0467B /* FlickrSearchDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FlickrSearchDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0EA6F4264494E500E0467B /* FlickrImagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImagesModel.swift; sourceTree = "<group>"; };
 		9CBEA4E82644976900DD2C53 /* FlickrImagesRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImagesRemoteDataSource.swift; sourceTree = "<group>"; };
+		9CBEA4ED26449AA900DD2C53 /* FlickrImagesDataRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImagesDataRepo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				9C0EA6F4264494E500E0467B /* FlickrImagesModel.swift */,
 				9CBEA4E82644976900DD2C53 /* FlickrImagesRemoteDataSource.swift */,
+				9CBEA4ED26449AA900DD2C53 /* FlickrImagesDataRepo.swift */,
 			);
 			path = FlickrImages;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C0EA6F5264494E500E0467B /* FlickrImagesModel.swift in Sources */,
+				9CBEA4EE26449AA900DD2C53 /* FlickrImagesDataRepo.swift in Sources */,
 				9CBEA4E92644976900DD2C53 /* FlickrImagesRemoteDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
