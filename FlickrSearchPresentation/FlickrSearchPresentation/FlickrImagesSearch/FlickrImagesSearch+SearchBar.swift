@@ -35,7 +35,6 @@ extension FlickrImagesSearchVC: UISearchBarDelegate {
                     self.recentSearchTableView.alpha = 1.0
                 })
             
-            self.recentSearchTableView.isHidden = false
             self.recentSearchTableView.reloadData()
         }
         

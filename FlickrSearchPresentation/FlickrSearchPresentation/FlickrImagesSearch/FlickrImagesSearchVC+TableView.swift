@@ -32,4 +32,15 @@ extension FlickrImagesSearchVC: UITableViewDelegate, UITableViewDataSource {
                 cell.alpha = 1
         })
     }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedItem = self.recentSearchs[indexPath.row]
+        self.searchImagesSearchBar.text = selectedItem
+        UIView.animate(
+            withDuration: 0.2,
+            animations: {
+                self.recentSearchTableView.alpha = 0
+            })
+        
+    }
 }

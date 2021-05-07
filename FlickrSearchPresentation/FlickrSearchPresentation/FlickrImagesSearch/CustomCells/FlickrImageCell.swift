@@ -26,8 +26,11 @@ class FlickrImageCell: UICollectionViewCell {
 
         flickrImage.layer.cornerRadius = 5
         flickrTitleLabel.layer.cornerRadius = 5
+        flickrTitleLabel.layer.masksToBounds = true
         flickrTitleLabel.numberOfLines = 0
         flickrTitleLabel.text = flickrImageEntity.title
-        flickrImage.downloaded(from: flickrImageEntity.id ?? "")
+        
+        let imageURLString = "http://farm\(flickrImageEntity.farm ?? 0).static.flickr.com/\(flickrImageEntity.server ?? "")/\(flickrImageEntity.id ?? "")_\(flickrImageEntity.secret ?? "").jpg"
+        flickrImage.downloaded(from: imageURLString)
     }
 }
