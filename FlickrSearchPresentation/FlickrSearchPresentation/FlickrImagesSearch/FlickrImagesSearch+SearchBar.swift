@@ -19,6 +19,9 @@ extension FlickrImagesSearchVC: UISearchBarDelegate {
         }
         
         self.recentSearchTableView.alpha = 0.0
+        self.imagesListCollectionView?.scrollToItem(at: IndexPath(row: 0, section: 0),
+                                          at: .top,
+                                    animated: true)
         self.flickrImagesSearchVM.getFlickrSearchResults(with: searchtext, page: 1)
         
         self.searchImagesSearchBar.resignFirstResponder()
