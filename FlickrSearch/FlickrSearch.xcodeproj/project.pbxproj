@@ -20,6 +20,8 @@
 		9C0EA6F0264494AD00E0467B /* FlickrSearchPresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C0EA6EB264494AD00E0467B /* FlickrSearchPresentation.framework */; };
 		9C0EA6F1264494AD00E0467B /* FlickrSearchPresentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C0EA6EB264494AD00E0467B /* FlickrSearchPresentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9CCFB6D526452DD8007A6E9C /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFB6D426452DD8007A6E9C /* AppEnvironment.swift */; };
+		9CCFB6DE264533F2007A6E9C /* FlickrImagesSearchDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFB6DD264533F2007A6E9C /* FlickrImagesSearchDI.swift */; };
+		9CCFB6E22645350B007A6E9C /* AppDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFB6E12645350B007A6E9C /* AppDI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		9C0EA6EA264494AD00E0467B /* FlickrSearchDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FlickrSearchDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0EA6EB264494AD00E0467B /* FlickrSearchPresentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FlickrSearchPresentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCFB6D426452DD8007A6E9C /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		9CCFB6DD264533F2007A6E9C /* FlickrImagesSearchDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImagesSearchDI.swift; sourceTree = "<group>"; };
+		9CCFB6E12645350B007A6E9C /* AppDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,8 @@
 		9CCFB6CF26452D19007A6E9C /* AppDI */ = {
 			isa = PBXGroup;
 			children = (
+				9CCFB6DD264533F2007A6E9C /* FlickrImagesSearchDI.swift */,
+				9CCFB6E12645350B007A6E9C /* AppDI.swift */,
 			);
 			path = AppDI;
 			sourceTree = "<group>";
@@ -327,6 +333,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C0EA61126448C4400E0467B /* AppDelegate.swift in Sources */,
+				9CCFB6DE264533F2007A6E9C /* FlickrImagesSearchDI.swift in Sources */,
+				9CCFB6E22645350B007A6E9C /* AppDI.swift in Sources */,
 				9C0EA61326448C4400E0467B /* SceneDelegate.swift in Sources */,
 				9CCFB6D526452DD8007A6E9C /* AppEnvironment.swift in Sources */,
 			);
