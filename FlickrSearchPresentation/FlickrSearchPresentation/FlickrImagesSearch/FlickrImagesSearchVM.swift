@@ -32,6 +32,7 @@ public class FlickrImagesSearchVM: ObservableObject {
                     if page == 1 {
                         self?.flickrSearchResult = flickrSearchEntity
                     } else {
+                        self?.flickrSearchResult.photos?.page = flickrSearchEntity.photos?.page
                         for item in flickrSearchEntity.photos?.photo ?? [] {
                             self?.flickrSearchResult.photos?.photo?.append(item)
                         }

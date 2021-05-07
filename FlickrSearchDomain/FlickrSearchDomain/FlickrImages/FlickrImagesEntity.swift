@@ -17,7 +17,7 @@ public struct FlickrImagesEntity: Codable {
     }
 
     public struct Photos: Codable {
-        public let page: Int?
+        public var page: Int?
         public let pages: Int?
         public let perpage: Int?
         public let total: String?
