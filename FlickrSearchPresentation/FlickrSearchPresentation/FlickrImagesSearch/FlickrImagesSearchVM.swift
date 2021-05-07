@@ -28,6 +28,7 @@ public class FlickrImagesSearchVM: ObservableObject {
             DispatchQueue.main.async {
                 switch flickrSearchResults {
                 case let .success(flickrSearchEntity):
+                    self?.error = nil
                     if page == 1 {
                         self?.flickrSearchResult = flickrSearchEntity
                     } else {
