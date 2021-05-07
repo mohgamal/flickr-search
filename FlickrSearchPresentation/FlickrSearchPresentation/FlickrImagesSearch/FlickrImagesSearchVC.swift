@@ -64,6 +64,7 @@ public class FlickrImagesSearchVC: UIViewController {
     }
 
     public func addSpinner() {
+        spinner.color = #colorLiteral(red: 0.03319132701, green: 0.6270697713, blue: 0.9124585986, alpha: 1)
         spinner.translatesAutoresizingMaskIntoConstraints = false
         spinner.startAnimating()
         view.addSubview(spinner)
