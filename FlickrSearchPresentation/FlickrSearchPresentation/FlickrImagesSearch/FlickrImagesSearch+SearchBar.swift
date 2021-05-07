@@ -22,6 +22,11 @@ extension FlickrImagesSearchVC: UISearchBarDelegate {
     public func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         self.recentSearchs = Utils.getRecewntSearchArray()
         if self.recentSearchs.count > 0 {
+            
+            if self.recentSearchs.count <= 5 {
+                self.recentSearchTableViewHeightConstraint.constant = CGFloat(50 * self.recentSearchs.count)
+            }
+            
             UIView.animate(
                 withDuration: 0.2,
                 animations: {

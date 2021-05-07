@@ -24,6 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.9957008957862854" green="0.99737614393234253" blue="0.99930268526077271" alpha="0.89970244350812301" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Mth-kf-hL1" secondAttribute="trailing" constant="10" id="E5m-75-VtD"/>
                     <constraint firstItem="Mth-kf-hL1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="L3W-CF-gmM"/>
@@ -31,6 +32,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="recentSearchTextLabel" destination="Mth-kf-hL1" id="fMK-Rl-K4J"/>
             </connections>

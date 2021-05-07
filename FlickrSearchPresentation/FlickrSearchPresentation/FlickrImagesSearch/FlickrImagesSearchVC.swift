@@ -14,6 +14,7 @@ public class FlickrImagesSearchVC: UIViewController {
     @IBOutlet weak var searchImagesSearchBar: UISearchBar!
     @IBOutlet weak var recentSearchTableView: UITableView!
     @IBOutlet weak var imagesListCollectionView: UICollectionView!
+    @IBOutlet weak var recentSearchTableViewHeightConstraint: NSLayoutConstraint!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ public class FlickrImagesSearchVC: UIViewController {
         self.recentSearchTableView.dataSource = self
         self.recentSearchTableView.register(UINib(nibName: "RecentSearchCell", bundle: Bundle(for: RecentSearchCell.self)), forCellReuseIdentifier: RecentSearchCell.cellIdentifier)
         self.recentSearchTableView.alpha = 0
+        self.recentSearchTableView.tableFooterView = UIView()
         
         self.imagesListCollectionView.delegate = self
         self.imagesListCollectionView.dataSource = self
