@@ -13,7 +13,7 @@ public class Utils {
         let userDefaults = UserDefaults.standard
         var recentSearchsArray = userDefaults.array(forKey: "RecentSearchKey") ?? []
 
-        if recentSearchsArray.count >= 10 {
+        if recentSearchsArray.count >= 5 {
             recentSearchsArray.remove(at: 0)
         }
         

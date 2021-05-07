@@ -11,10 +11,13 @@ extension FlickrImagesSearchVC: UISearchBarDelegate {
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchtext = searchBar.text else { return }
         if searchtext != "" {
-            Utils.logRecentSearch(with: searchtext)
+            let currentLogSearch = Utils.getRecewntSearchArray()
+            if !currentLogSearch.contains(where: { $0 == searchtext}) {
+                Utils.logRecentSearch(with: searchtext)
+            }
         }
         
-        self.recentSearchTableView.isHidden = true
+        self.recentSearchTableView.alpha = 0.0
         
         self.searchImagesSearchBar.resignFirstResponder()
     }
@@ -22,16 +25,13 @@ extension FlickrImagesSearchVC: UISearchBarDelegate {
     public func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         self.recentSearchs = Utils.getRecewntSearchArray()
         if self.recentSearchs.count > 0 {
-            
-            if self.recentSearchs.count <= 5 {
-                self.recentSearchTableViewHeightConstraint.constant = CGFloat(50 * self.recentSearchs.count)
-            }
+            self.recentSearchTableViewHeightConstraint.constant = CGFloat(50 * self.recentSearchs.count)
             
             UIView.animate(
                 withDuration: 0.2,
                 animations: {
                     self.recentSearchTableView.alpha = 1.0
-            })
+                })
             
             self.recentSearchTableView.isHidden = false
             self.recentSearchTableView.reloadData()

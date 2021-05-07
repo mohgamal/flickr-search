@@ -28,6 +28,7 @@ public class FlickrImagesSearchVC: UIViewController {
         self.recentSearchTableView.register(UINib(nibName: "RecentSearchCell", bundle: Bundle(for: RecentSearchCell.self)), forCellReuseIdentifier: RecentSearchCell.cellIdentifier)
         self.recentSearchTableView.alpha = 0
         self.recentSearchTableView.tableFooterView = UIView()
+        self.recentSearchTableView.alwaysBounceVertical = false
         
         self.imagesListCollectionView.delegate = self
         self.imagesListCollectionView.dataSource = self
