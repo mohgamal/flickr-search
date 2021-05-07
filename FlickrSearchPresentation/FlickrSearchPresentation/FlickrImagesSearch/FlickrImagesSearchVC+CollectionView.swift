@@ -14,6 +14,7 @@ extension FlickrImagesSearchVC: UICollectionViewDelegate, UICollectionViewDataSo
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FlickrImageCell.cellIdentifier, for: indexPath) as! FlickrImageCell
+        cell.configCell()
         return cell
     }
     
