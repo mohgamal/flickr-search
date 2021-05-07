@@ -10,10 +10,15 @@ import UIKit
 class FlickrImageCell: UICollectionViewCell {
 
     static let cellIdentifier = "flickrImageCell"
+    @IBOutlet weak var containerView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        configCell()
+    }
+    
+    func configCell() {
+        self.containerView.layer.cornerRadius = 5
     }
 
 }

@@ -35,8 +35,8 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="M2Z-qb-MfY">
-                                <rect key="frame" x="9" y="132" width="405" height="300"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="M2Z-qb-MfY">
+                                <rect key="frame" x="0.0" y="132" width="414" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="TKD-Oo-GK9"/>
@@ -47,7 +47,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="c1e-Yi-caa" firstAttribute="leading" secondItem="gr9-8J-10X" secondAttribute="leading" id="B50-5z-x8U"/>
-                            <constraint firstItem="M2Z-qb-MfY" firstAttribute="leading" secondItem="gr9-8J-10X" secondAttribute="leading" constant="9" id="Ds4-Eg-kd0"/>
+                            <constraint firstItem="M2Z-qb-MfY" firstAttribute="leading" secondItem="gr9-8J-10X" secondAttribute="leading" id="Ds4-Eg-kd0"/>
                             <constraint firstItem="F4V-8d-0RN" firstAttribute="leading" secondItem="gr9-8J-10X" secondAttribute="leading" id="MVT-ld-7Tu"/>
                             <constraint firstItem="gr9-8J-10X" firstAttribute="trailing" secondItem="M2Z-qb-MfY" secondAttribute="trailing" id="SXQ-Cc-Wuk"/>
                             <constraint firstItem="c1e-Yi-caa" firstAttribute="top" secondItem="F4V-8d-0RN" secondAttribute="bottom" id="YRS-7N-aKt"/>

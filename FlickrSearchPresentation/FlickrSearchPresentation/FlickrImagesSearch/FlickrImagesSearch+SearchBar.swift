@@ -20,9 +20,18 @@ extension FlickrImagesSearchVC: UISearchBarDelegate {
     }
     
     public func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        self.recentSearchTableView.isHidden = false
         self.recentSearchs = Utils.getRecewntSearchArray()
-        self.recentSearchTableView.reloadData()
+        if self.recentSearchs.count > 0 {
+            UIView.animate(
+                withDuration: 0.2,
+                animations: {
+                    self.recentSearchTableView.alpha = 1.0
+            })
+            
+            self.recentSearchTableView.isHidden = false
+            self.recentSearchTableView.reloadData()
+        }
+        
         return true
     }
 }

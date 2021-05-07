@@ -5,21 +5,42 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="flickrImageCell" id="gTV-IL-0wX" customClass="FlickrImageCell" customModule="FlickrSearchPresentation" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="230" height="206"/>
+            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="230" height="206"/>
+                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJC-l3-gcY">
+                        <rect key="frame" x="5" y="5" width="240" height="240"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="230" height="206"/>
-            <point key="canvasLocation" x="-52" y="185"/>
+            <constraints>
+                <constraint firstItem="NJC-l3-gcY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Ga8-4C-M1B"/>
+                <constraint firstItem="NJC-l3-gcY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="L1t-1t-uvA"/>
+                <constraint firstAttribute="bottom" secondItem="NJC-l3-gcY" secondAttribute="bottom" constant="5" id="L60-pI-lR6"/>
+                <constraint firstAttribute="trailing" secondItem="NJC-l3-gcY" secondAttribute="trailing" constant="5" id="VYd-Sa-w27"/>
+            </constraints>
+            <size key="customSize" width="250" height="250"/>
+            <connections>
+                <outlet property="containerView" destination="NJC-l3-gcY" id="qKi-TC-GtW"/>
+            </connections>
+            <point key="canvasLocation" x="-163.768115942029" y="112.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
