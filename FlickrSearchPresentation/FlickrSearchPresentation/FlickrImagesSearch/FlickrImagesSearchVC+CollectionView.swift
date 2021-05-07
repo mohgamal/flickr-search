@@ -27,7 +27,7 @@ extension FlickrImagesSearchVC: UICollectionViewDelegate, UICollectionViewDataSo
     
     public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.row == (self.flickrImagesSearchVM.flickrSearchResult.photos?.photo?.count ?? 0) - 4 && !self.flickrImagesSearchVM.isLoading &&
-            self.flickrImagesSearchVM.page < self.flickrImagesSearchVM.pageCount {
+            self.flickrImagesSearchVM.page < (self.flickrImagesSearchVM.flickrSearchResult.photos?.pages ?? 0) {
             self.flickrImagesSearchVM.isLoading = true
             self.flickrImagesSearchVM.page += 1
             self.flickrImagesSearchVM.getFlickrSearchResults(with: searchImagesSearchBar.text ?? "", page: self.flickrImagesSearchVM.page)

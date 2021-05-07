@@ -28,7 +28,7 @@ public struct FlickrImagesModel: Codable {
             for singlePhoto in photo ?? [] {
                 photosList.append(singlePhoto.dotPhoto())
             }
-            return FlickrImagesEntity.Photos(page: page, pages: page, perpage: perpage, total: total, photo: photosList)
+            return FlickrImagesEntity.Photos(page: page, pages: pages, perpage: perpage, total: total, photo: photosList)
         }
     }
 
