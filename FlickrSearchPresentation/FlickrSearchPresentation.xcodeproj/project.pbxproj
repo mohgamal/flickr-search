@@ -19,6 +19,7 @@
 		9CBEA4FE2644A0AE00DD2C53 /* FlickrImagesSearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBEA4FD2644A0AE00DD2C53 /* FlickrImagesSearchVM.swift */; };
 		9CBEA5022644A10200DD2C53 /* FlickrImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBEA5002644A10200DD2C53 /* FlickrImageCell.swift */; };
 		9CBEA5032644A10200DD2C53 /* FlickrImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBEA5012644A10200DD2C53 /* FlickrImageCell.xib */; };
+		9CCFB6B426451894007A6E9C /* FlickrImagesSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFB6B326451894007A6E9C /* FlickrImagesSearchVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		9CBEA4FD2644A0AE00DD2C53 /* FlickrImagesSearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImagesSearchVM.swift; sourceTree = "<group>"; };
 		9CBEA5002644A10200DD2C53 /* FlickrImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageCell.swift; sourceTree = "<group>"; };
 		9CBEA5012644A10200DD2C53 /* FlickrImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlickrImageCell.xib; sourceTree = "<group>"; };
+		9CCFB6B326451894007A6E9C /* FlickrImagesSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImagesSearchVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				9CBEA4F426449F6700DD2C53 /* CustomCells */,
 				9CBEA4F126449D8E00DD2C53 /* FlickrImagesSearchStoryboard.storyboard */,
 				9CBEA4FD2644A0AE00DD2C53 /* FlickrImagesSearchVM.swift */,
+				9CCFB6B326451894007A6E9C /* FlickrImagesSearchVC.swift */,
 			);
 			path = FlickrImagesSearch;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CBEA4FB2644A05A00DD2C53 /* AppDIInterface.swift in Sources */,
+				9CCFB6B426451894007A6E9C /* FlickrImagesSearchVC.swift in Sources */,
 				9CBEA4FE2644A0AE00DD2C53 /* FlickrImagesSearchVM.swift in Sources */,
 				9CBEA5022644A10200DD2C53 /* FlickrImageCell.swift in Sources */,
 				9CBEA4F726449F8F00DD2C53 /* RecentSearchCell.swift in Sources */,

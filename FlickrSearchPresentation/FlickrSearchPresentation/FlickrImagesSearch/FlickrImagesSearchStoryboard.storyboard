@@ -11,7 +11,7 @@
         <!--Flickr Images Search-->
         <scene sceneID="XWV-Je-SnL">
             <objects>
-                <viewController storyboardIdentifier="FlickrImagesSearchVC" id="q6O-2y-H78" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlickrImagesSearchVC" id="q6O-2y-H78" customClass="FlickrImagesSearchVC" customModule="FlickrSearchPresentation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jbN-KB-9AR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
