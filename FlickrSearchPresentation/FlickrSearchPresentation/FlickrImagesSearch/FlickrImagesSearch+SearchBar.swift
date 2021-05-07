@@ -18,6 +18,7 @@ extension FlickrImagesSearchVC: UISearchBarDelegate {
         }
         
         self.recentSearchTableView.alpha = 0.0
+        self.flickrImagesSearchVM.getFlickrSearchResults(with: searchtext, page: 1)
         
         self.searchImagesSearchBar.resignFirstResponder()
     }
