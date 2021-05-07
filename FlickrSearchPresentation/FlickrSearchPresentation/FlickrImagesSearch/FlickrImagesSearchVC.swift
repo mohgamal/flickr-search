@@ -17,7 +17,7 @@ public class FlickrImagesSearchVC: UIViewController {
 
     var appDI: AppDIInterface
 
-    var spinner = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+    public var spinner = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
 
     var recentSearchs = Utils.getRecewntSearchArray()
 
@@ -42,7 +42,6 @@ public class FlickrImagesSearchVC: UIViewController {
         self.title = "Flickr Images Search"
         
         configViewSources()
-        addSpinner()
         bindViewModel()
     }
 
@@ -62,7 +61,7 @@ public class FlickrImagesSearchVC: UIViewController {
         }.store(in: &cancellables)
     }
 
-    private func addSpinner() {
+    public func addSpinner() {
         spinner.translatesAutoresizingMaskIntoConstraints = false
         spinner.startAnimating()
         view.addSubview(spinner)

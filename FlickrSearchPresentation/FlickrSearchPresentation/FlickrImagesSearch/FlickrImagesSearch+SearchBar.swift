@@ -11,6 +11,7 @@ extension FlickrImagesSearchVC: UISearchBarDelegate {
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchtext = searchBar.text else { return }
         if searchtext != "" {
+            self.addSpinner()
             let currentLogSearch = Utils.getRecewntSearchArray()
             if !currentLogSearch.contains(where: { $0 == searchtext}) {
                 Utils.logRecentSearch(with: searchtext)
