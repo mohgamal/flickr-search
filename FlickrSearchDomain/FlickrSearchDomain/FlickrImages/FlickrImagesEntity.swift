@@ -8,7 +8,7 @@
 import Foundation
 
 public struct FlickrImagesEntity: Codable {
-    public let photos: Photos?
+    public var photos: Photos?
     public let stat: String?
 
     public init(photos: Photos?, stat: String?) {
@@ -21,7 +21,7 @@ public struct FlickrImagesEntity: Codable {
         public let pages: Int?
         public let perpage: Int?
         public let total: String?
-        public let photo: [Photo]?
+        public var photo: [Photo]?
 
         public init(page: Int?, pages: Int?, perpage: Int?, total: String?, photo: [Photo]?) {
             self.page = page

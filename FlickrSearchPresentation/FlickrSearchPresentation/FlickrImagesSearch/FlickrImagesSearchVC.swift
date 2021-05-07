@@ -50,11 +50,13 @@ public class FlickrImagesSearchVC: UIViewController {
             guard let self = self else {
                 return
             }
+            
             self.spinner.stopAnimating()
 
             if self.flickrImagesSearchVM.error != nil {
                 self.viewAlert(with: self.flickrImagesSearchVM.error)
             } else {
+                self.flickrImagesSearchVM.isLoading = false
                 self.imagesListCollectionView.reloadData()
             }
 

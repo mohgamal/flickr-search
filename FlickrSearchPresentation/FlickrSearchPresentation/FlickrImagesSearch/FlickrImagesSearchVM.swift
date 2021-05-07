@@ -13,6 +13,8 @@ public class FlickrImagesSearchVM: ObservableObject {
     public let objectWillChange = PassthroughSubject<Void, Never>()
 
     var error: Error?
+    var page = 1
+    var isLoading = false
     var flickrSearchResult: FlickrImagesEntity = FlickrImagesEntity(photos: FlickrImagesEntity.Photos(page: nil, pages: nil, perpage: nil, total: nil, photo: []), stat: nil)
 
     private var flickrSearchInteractor: FlickrImagesInteractor
@@ -26,7 +28,13 @@ public class FlickrImagesSearchVM: ObservableObject {
             DispatchQueue.main.async {
                 switch flickrSearchResults {
                 case let .success(flickrSearchEntity):
-                    self?.flickrSearchResult = flickrSearchEntity
+                    if page == 1 {
+                        self?.flickrSearchResult = flickrSearchEntity
+                    } else {
+                        for item in flickrSearchEntity.photos?.photo ?? [] {
+                            self?.flickrSearchResult.photos?.photo?.append(item)
+                        }
+                    }
                     self?.objectWillChange.send()
                 case let .failure(error):
                     self?.error = error
