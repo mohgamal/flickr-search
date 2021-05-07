@@ -15,7 +15,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         let storyBoard = UIStoryboard(name: "FlickrImagesSearchStoryboard", bundle: Bundle(for: FlickrImagesSearchVM.self))
-        let navigationController = storyBoard.instantiateViewController(identifier: "FlickrImagesSearchNavigationController")
+        let navigationController = storyBoard.instantiateViewController(identifier: "FlickrImagesSearchNavigationController") as UINavigationController
+        
+        let flickrImagesSearchVC = storyBoard.instantiateViewController(identifier: "FlickrImagesSearchVC", creator: { coder -> FlickrImagesSearchVC in
+            return FlickrImagesSearchVC(coder: coder, appDI: AppDI.shared, flickrImagesSearchVM:  AppDI.shared.flickrImagesSearchDependencies())
+        })
+        
+        navigationController.viewControllers.append(flickrImagesSearchVC)
+        
         if let windowScene = scene as? UIWindowScene {
                    let window = UIWindow(windowScene: windowScene)
            

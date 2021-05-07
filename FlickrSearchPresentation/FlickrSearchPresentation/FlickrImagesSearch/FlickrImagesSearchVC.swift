@@ -26,12 +26,12 @@ public class FlickrImagesSearchVC: UIViewController {
     @IBOutlet weak var imagesListCollectionView: UICollectionView!
     @IBOutlet weak var recentSearchTableViewHeightConstraint: NSLayoutConstraint!
 
-    public init(appDI: AppDIInterface, flickrImagesSearchVM: FlickrImagesSearchVM) {
+    public init(coder: NSCoder,appDI: AppDIInterface, flickrImagesSearchVM: FlickrImagesSearchVM) {
         self.appDI = appDI
         self.flickrImagesSearchVM = flickrImagesSearchVM
-        super.init(nibName: nil, bundle: nil)
+        super.init(coder: coder)!
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -39,6 +39,8 @@ public class FlickrImagesSearchVC: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "Flickr Images Search"
+        
         configViewSources()
         addSpinner()
         bindViewModel()
