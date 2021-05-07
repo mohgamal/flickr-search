@@ -7,23 +7,30 @@
 
 import UIKit
 
-class FlickrImagesSearchVC: UIViewController {
+public class FlickrImagesSearchVC: UIViewController {
 
-    override func viewDidLoad() {
+    var recentSearchs = Utils.getRecewntSearchArray()
+    
+    @IBOutlet weak var searchImagesSearchBar: UISearchBar!
+    @IBOutlet weak var recentSearchTableView: UITableView!
+    @IBOutlet weak var imagesListCollectionView: UICollectionView!
+    
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       configViewSources()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func configViewSources() {
+        self.recentSearchTableView.delegate = self
+        self.recentSearchTableView.dataSource = self
+        self.recentSearchTableView.register(UINib(nibName: "RecentSearchCell", bundle: Bundle(for: RecentSearchCell.self)), forCellReuseIdentifier: RecentSearchCell.cellIdentifier)
+        
+        self.imagesListCollectionView.delegate = self
+        self.imagesListCollectionView.dataSource = self
+        self.imagesListCollectionView.register(UINib(nibName: "FlickrImageCell", bundle: Bundle(for: FlickrImageCell.self)), forCellWithReuseIdentifier: FlickrImageCell.cellIdentifier)
+        
+        self.searchImagesSearchBar.delegate = self
     }
-    */
 
 }

@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,7 +37,7 @@
                             </collectionView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="M2Z-qb-MfY">
                                 <rect key="frame" x="9" y="132" width="405" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="TKD-Oo-GK9"/>
                                 </constraints>
@@ -58,6 +59,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Flickr Images Search" id="GxB-IG-WP3"/>
+                    <connections>
+                        <outlet property="imagesListCollectionView" destination="c1e-Yi-caa" id="il4-ol-dg1"/>
+                        <outlet property="recentSearchTableView" destination="M2Z-qb-MfY" id="ubd-Vf-ycB"/>
+                        <outlet property="searchImagesSearchBar" destination="F4V-8d-0RN" id="BBy-Kp-xId"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Tk-Ju-ulk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,4 +98,9 @@
             <point key="canvasLocation" x="357.97101449275362" y="144.64285714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
