@@ -14,6 +14,7 @@ public class FlickrImagesSearchVM: ObservableObject {
 
     var error: Error?
     var page = 1
+    var pageCount = 0
     var isLoading = false
     var flickrSearchResult: FlickrImagesEntity = FlickrImagesEntity(photos: FlickrImagesEntity.Photos(page: nil, pages: nil, perpage: nil, total: nil, photo: []), stat: nil)
 
@@ -28,6 +29,12 @@ public class FlickrImagesSearchVM: ObservableObject {
             DispatchQueue.main.async {
                 switch flickrSearchResults {
                 case let .success(flickrSearchEntity):
+                    
+                    self?.pageCount = ((Int(flickrSearchEntity.photos?.total ?? "") ?? 0) / 100)
+                    if ((Int(flickrSearchEntity.photos?.total ?? "") ?? 0) % 100) > 0 {
+                        self?.pageCount += 1
+                    }
+                    
                     if page == 1 {
                         self?.flickrSearchResult = flickrSearchEntity
                     } else {
