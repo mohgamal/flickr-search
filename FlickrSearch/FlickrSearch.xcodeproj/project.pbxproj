@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9C0EA61126448C4400E0467B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EA61026448C4400E0467B /* AppDelegate.swift */; };
 		9C0EA61326448C4400E0467B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EA61226448C4400E0467B /* SceneDelegate.swift */; };
-		9C0EA61526448C4400E0467B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EA61426448C4400E0467B /* ViewController.swift */; };
 		9C0EA61A26448C4400E0467B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0EA61926448C4400E0467B /* Assets.xcassets */; };
 		9C0EA61D26448C4400E0467B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0EA61B26448C4400E0467B /* LaunchScreen.storyboard */; };
 		9C0EA62826448C4400E0467B /* FlickrSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EA62726448C4400E0467B /* FlickrSearchTests.swift */; };
@@ -59,7 +58,6 @@
 		9C0EA60D26448C4300E0467B /* FlickrSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0EA61026448C4400E0467B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C0EA61226448C4400E0467B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C0EA61426448C4400E0467B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9C0EA61926448C4400E0467B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C0EA61C26448C4400E0467B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C0EA61E26448C4400E0467B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,12 +124,10 @@
 		9C0EA60F26448C4300E0467B /* FlickrSearch */ = {
 			isa = PBXGroup;
 			children = (
-				9C0EA61026448C4400E0467B /* AppDelegate.swift */,
-				9C0EA61226448C4400E0467B /* SceneDelegate.swift */,
-				9C0EA61426448C4400E0467B /* ViewController.swift */,
-				9C0EA61926448C4400E0467B /* Assets.xcassets */,
-				9C0EA61B26448C4400E0467B /* LaunchScreen.storyboard */,
-				9C0EA61E26448C4400E0467B /* Info.plist */,
+				9CCFB6CA26452CEA007A6E9C /* AppFiles */,
+				9CCFB6D026452D1E007A6E9C /* AppEnviroment */,
+				9CCFB6CF26452D19007A6E9C /* AppDI */,
+				9CCFB6D126452D26007A6E9C /* Resources */,
 			);
 			path = FlickrSearch;
 			sourceTree = "<group>";
@@ -162,6 +158,39 @@
 				9C0EA6EB264494AD00E0467B /* FlickrSearchPresentation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CCFB6CA26452CEA007A6E9C /* AppFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9C0EA61026448C4400E0467B /* AppDelegate.swift */,
+				9C0EA61226448C4400E0467B /* SceneDelegate.swift */,
+				9C0EA61E26448C4400E0467B /* Info.plist */,
+			);
+			path = AppFiles;
+			sourceTree = "<group>";
+		};
+		9CCFB6CF26452D19007A6E9C /* AppDI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppDI;
+			sourceTree = "<group>";
+		};
+		9CCFB6D026452D1E007A6E9C /* AppEnviroment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppEnviroment;
+			sourceTree = "<group>";
+		};
+		9CCFB6D126452D26007A6E9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C0EA61926448C4400E0467B /* Assets.xcassets */,
+				9C0EA61B26448C4400E0467B /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +323,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C0EA61526448C4400E0467B /* ViewController.swift in Sources */,
 				9C0EA61126448C4400E0467B /* AppDelegate.swift in Sources */,
 				9C0EA61326448C4400E0467B /* SceneDelegate.swift in Sources */,
 			);
@@ -466,7 +494,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QCBY87LF55;
-				INFOPLIST_FILE = FlickrSearch/Info.plist;
+				INFOPLIST_FILE = FlickrSearch/AppFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,7 +513,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QCBY87LF55;
-				INFOPLIST_FILE = FlickrSearch/Info.plist;
+				INFOPLIST_FILE = FlickrSearch/AppFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
