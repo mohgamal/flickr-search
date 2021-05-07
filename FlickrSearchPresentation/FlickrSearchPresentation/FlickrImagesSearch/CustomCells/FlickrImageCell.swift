@@ -31,6 +31,13 @@ class FlickrImageCell: UICollectionViewCell {
         flickrTitleLabel.text = flickrImageEntity.title
         
         let imageURLString = "http://farm\(flickrImageEntity.farm ?? 0).static.flickr.com/\(flickrImageEntity.server ?? "")/\(flickrImageEntity.id ?? "")_\(flickrImageEntity.secret ?? "").jpg"
-        flickrImage.downloaded(from: imageURLString)
+        ImageDownloader.shared.downloadImage(with: imageURLString, completionHandler: { (image, result) in
+            self.flickrImage.image = image
+        }, placeholderImage: UIImage(named: "logo"))
+        self.flickrImage.contentMode = .scaleToFill
+    }
+    
+    override func prepareForReuse() {
+        self.flickrImage.image = UIImage(named: "logo")
     }
 }
