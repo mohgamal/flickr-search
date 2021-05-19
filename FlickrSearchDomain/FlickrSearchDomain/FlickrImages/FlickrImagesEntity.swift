@@ -20,10 +20,10 @@ public struct FlickrImagesEntity: Codable {
         public var page: Int?
         public let pages: Int?
         public let perpage: Int?
-        public let total: String?
+        public let total: DynamicFiledType?
         public var photo: [Photo]?
 
-        public init(page: Int?, pages: Int?, perpage: Int?, total: String?, photo: [Photo]?) {
+        public init(page: Int?, pages: Int?, perpage: Int?, total: DynamicFiledType?, photo: [Photo]?) {
             self.page = page
             self.pages = pages
             self.perpage = perpage

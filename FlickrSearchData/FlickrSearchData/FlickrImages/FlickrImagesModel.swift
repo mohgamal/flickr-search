@@ -20,7 +20,7 @@ public struct FlickrImagesModel: Codable {
         public let page: Int?
         public let pages: Int?
         public let perpage: Int?
-        public let total: String?
+        public let total: FlickrSearchDomain.DynamicFiledType?
         public let photo: [Photo]?
 
         func dotPhotos() -> FlickrImagesEntity.Photos {
